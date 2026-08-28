@@ -1,0 +1,2 @@
+import { CollectionView } from './CollectionView.jsx';
+export default function Leaderboard() { return <CollectionView resource="leaderboard" title="Leaderboard" description="A snapshot of this month's momentum." renderItem={(entry) => <article className="resource-card rank-card" key={entry._id ?? entry.rank}><span className="rank-number">#{entry.rank}</span><h2>{entry.points} points</h2><p>{entry.user?.name ?? entry.user ?? 'Athlete'}</p></article>} />; }

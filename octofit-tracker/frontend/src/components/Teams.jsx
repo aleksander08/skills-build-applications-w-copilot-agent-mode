@@ -1,0 +1,2 @@
+import { CollectionView } from './CollectionView.jsx';
+export default function Teams() { return <CollectionView resource="teams" title="Team standings" description="Find your crew and keep the friendly competition moving." renderItem={(team) => <article className="resource-card" key={team._id ?? team.name}><span className="card-kicker">{team.members?.length ?? 0} members</span><h2>{team.name}</h2><p>{team.motto}</p></article>} />; }

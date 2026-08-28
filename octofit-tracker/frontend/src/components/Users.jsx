@@ -1,0 +1,2 @@
+import { CollectionView } from './CollectionView.jsx';
+export default function Users() { return <CollectionView resource="users" title="Athlete roster" description="The people making progress across Mergington High." renderItem={(user) => <article className="resource-card" key={user._id ?? user.username}><span className="card-kicker">Grade {user.grade}</span><h2>{user.name}</h2><p>@{user.username}</p><p className="muted">{user.email}</p></article>} />; }

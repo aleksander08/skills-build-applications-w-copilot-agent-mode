@@ -1,0 +1,2 @@
+import { CollectionView } from './CollectionView.jsx';
+export default function Workouts() { return <CollectionView resource="workouts" title="Workout library" description="A few good places to start your next session." renderItem={(workout) => <article className="resource-card" key={workout._id ?? workout.title}><span className="card-kicker">{workout.category} · {workout.difficulty}</span><h2>{workout.title}</h2><p>{workout.description}</p><p className="muted">{workout.durationMinutes} minutes</p></article>} />; }
