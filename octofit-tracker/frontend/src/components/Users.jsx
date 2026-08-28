@@ -1,0 +1,3 @@
+import { CollectionView } from './CollectionView.jsx';
+const usersEndpoint = import.meta.env.VITE_CODESPACE_NAME ? `https://${import.meta.env.VITE_CODESPACE_NAME}-8000.app.github.dev/api/users/` : '/api/users/';
+export default function Users() { return <CollectionView resource="users" endpoint={usersEndpoint} title="Athlete roster" description="The people making progress across Mergington High." renderItem={(user) => <article className="resource-card" key={user._id ?? user.username}><span className="card-kicker">Grade {user.grade}</span><h2>{user.name}</h2><p>@{user.username}</p><p className="muted">{user.email}</p></article>} />; }
